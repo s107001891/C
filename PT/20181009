@@ -37,6 +37,21 @@ Network Distance: 1 hop
 OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 2.71 seconds
 
+root@kali:~# nmap -p 0-65535 172.20.155.28
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2018-10-09 02:38 EDT
+Nmap scan report for 172.20.155.28
+Host is up (0.00080s latency).
+Not shown: 65533 closed ports
+PORT    STATE SERVICE
+135/tcp open  msrpc
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+MAC Address: 08:00:27:2B:E4:43 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 20.25 seconds
+
+
 root@kali:~# msfconsole 172.20.155.28
                                                   
  _                                                    _
