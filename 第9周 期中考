@@ -263,7 +263,95 @@ fac_while:使用while loop開發的階乘函數
 fac_doWhile:使用do While loop開發的階乘函數
 fac_r:使用Recursion方式開發的階乘函數
 ```
+#include <stdio.h>
+#include <stdlib.h>
 
+int a(int a)
+{
+ int i;
+ int total=1;
+	 for (i=1;i<=a;i++)
+	   {
+	     total*=i;
+		   
+	   }
+ return total;
+}
+	
+/////////////////////////////////////
+int b(int a)
+{
+    int i=1;
+	int total=1;
+	  while(i<=a)
+	    {
+	     total*=i;
+	    
+		  i++; 
+		}	
+ return total;
+}
+////////////////////////////////
+int c(int a)
+{
+  int i=1;
+  int total=1;
+    do{
+    	total*=i;
+		  i++; 
+    	
+	}while(i<=a);
+ return total; 	
+}
+////////////////////////////////////
+
+int f(void)
+{
+ int a;
+ int total=0;
+	 for (a=1;a<=99;a++)
+	   {
+	   	 if((a%2)==0)
+	   	  {
+	   	  	total+=a;
+		  }
+	   }
+	
+ return total;
+	
+}
+////////////////////////////////
+int d(int a)
+{
+ int total=0;
+   
+    if (a==1)
+      total=1;
+    else
+       total=d(a-1)*a;
+ 
+  return total;
+}
+///////////////////////////////////
+
+
+
+
+
+int main(void)
+{
+	int i;
+	printf("??趼");
+	scanf("%d",&i);
+	printf("for      腔蕆=%d\n",a(i));
+	printf("while    腔蕆=%d\n",b(i));
+    printf("dowhile  腔蕆=%d\n",c(i));
+	printf("recursion腔蕆=%d\n",d(i));
+	system("pause");
+	return 0;
+	
+	
+}
 ```
 函數設計題:完成底下計算次方函數power(x,n):x**n
 power(2,5)==2*2*2*2*2=2**5=32
