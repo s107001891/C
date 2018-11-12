@@ -160,7 +160,99 @@ main()
 [1]用三種迴圈方式撰寫1+3+…+101的總和。
 [2]用Recursion方式撰寫1+3+…+99的總和。
 ```
+#include <stdio.h>
+#include <stdlib.h>
 
+int a(void)
+{
+ int a;
+ int total=0;
+	 for (a=1;a<=101;a++)
+	   {
+	   	 if((a%2)==1)
+	   	  {
+	   	  	total+=a;
+		  }
+	   }
+	
+ return total;
+}
+/////////////////////////////////////
+int b(void)
+{
+	int a=1;
+	int total=0;
+	  while(a<102)
+	    {
+		  if((a%2)==1)
+			{
+			   total+=a;
+	        }
+		  a++; 
+		}	
+ return total;
+}
+////////////////////////////////
+int c(void)
+{
+  int a=1;
+  int total=0;
+    do{
+    	if((a%2)==1)
+			{
+			   total+=a;
+	        }
+		  a++; 
+    	
+	}while(a<102);
+ return total; 	
+}
+////////////////////////////////////
+
+int f(void)
+{
+ int a;
+ int total=0;
+	 for (a=1;a<=99;a++)
+	   {
+	   	 if((a%2)==0)
+	   	  {
+	   	  	total+=a;
+		  }
+	   }
+	
+ return total;
+	
+}
+////////////////////////////////
+int d(int a)
+{
+ int total=0;
+   
+    if (a==1)
+      total=1;
+    else
+       total=d(a-1)+a;
+ 
+  return total;
+}
+///////////////////////////////////
+
+
+
+
+
+int main(void)
+{
+	printf("for      腔1+3+...+101=%d\n",a());
+	printf("while    腔1+3+...+101=%d\n",b());
+    printf("dowhile  腔1+3+...+101=%d\n",c());
+	printf("recursion腔1+3+...+99 =%d\n",d(99)-f());
+	system("pause");
+	return 0;
+	
+	
+}
 ```
 函數設計題:完成底下計算factorial階乘函數fac(n):n!
 fac(5)==5*4*4*3*1==5!=120
