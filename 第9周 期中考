@@ -363,43 +363,97 @@ power_while:使用while loop開發的次方函數
 power_doWhile:使用do While loop開發的次方函數
 power_r:使用Recursion方式開發的次方函數
 ```
-```
 #include <stdio.h>
 #include <stdlib.h>
 
-double power_for(double, int);	
-double power_while(double, int);
-double power_doWhile(double, int);
-double power_r(double, int);
+int a(int b,int a)
+{
+int i;
+int total=b;
+	 for (i=1;i<=a-1;i++)
+	   {
+	     total*=b;
+		   
+	   }
+ return total;
+}
+	
+/////////////////////////////////////
+int b(int b,int a)
+{
+    int i=1;
+	int total=1;
+	  while(i<=a)
+	    {
+	     total*=b;
+	    
+		  i++; 
+		}	
+ return total;
+}
+////////////////////////////////
+int c(int b,int a)
+{
+  int i=1;
+  int total=1;
+    do{
+    	total*=b;
+		  i++; 
+    	
+	}while(i<=a);
+ return total; 	
+}
+////////////////////////////////////
+
+int f(void)
+{
+ int a;
+ int total=0;
+	 for (a=1;a<=99;a++)
+	   {
+	   	 if((a%2)==0)
+	   	  {
+	   	  	total+=a;
+		  }
+	   }
+	
+ return total;
+	
+}
+////////////////////////////////
+int d(int b,int a)
+{
+ int total=0;
+   
+    if (a==1)
+      total=b;
+    else
+       total=d(b,a-1)*b;
+ 
+  return total;
+}
+///////////////////////////////////
+
+
+
+
 
 int main(void)
 {
-   double x;		
-   int n;		
-
-   printf("請輸入你要計算的內容:");	
-   scanf("%lf,%d",&x,&n); 	
-
-   printf("這是使用for loop完成的結果")
-   printf("%lf的%dΩ次方是%lf\n",x,n,power_for(x,n)); 
-
-.......
-.......
-
-   system("pause");
-   return 0;
+	int i,q;
+	printf("??趼");
+	scanf("%d %d",&i,&q);
+	printf("for      腔棒源滲=%d\n",a(i,q));
+	printf("while    腔棒源滲=%d\n",b(i,q));
+    printf("dowhile  腔棒源滲=%d\n",c(i,q));
+	printf("recursion腔棒源滲=%d\n",d(i,q));
+	system("pause");
+	return 0;
+	
+	
 }
-
-double power_for(double base, int n) 
-{
-   int i;
-   double pow=1.0;
-   for(i=1;i<=n;i++)		
-      pow=pow*base;
-   return pow;
-}
-
 ```
+
 ```
 函數設計題:完成底下計算費式數列函數fib(n):
 n=1,2  fib(n)=1  
