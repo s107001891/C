@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+double power_for(double b,int a)
+{
+ double total=1;
+	 for (int i=1;i<=a;i++)
+	   {
+	     total*=b;  
+	   }
+ return total;
+}	
+/////////////////////////////////////
+double power_while(double b,int a)
+{
+ int i=1;
+ double total=1.0;
+	  while(i<=a)
+	    {
+	     total*=b;
+		 i++; 
+		}	
+ return total;
+}
+////////////////////////////////
+double power_do_while(double b,int a)
+{
+  int i=1;
+  double total=1;
+    do{
+    	total*=b;
+	    i++; 
+      }while(i<=a);
+ return total; 	
+}
+////////////////////////////////////
+double power_recursion(double b,int a)
+{
+    if (a==0)
+      return 1;
+    else
+       return power_recursion(b,a-1)*b;
+}
+///////////////////////////////////
+int main()
+{	
+    double i;
+	int q;
+	printf("請輸入數字:");
+	scanf("%lf %d",&i,&q);
+	printf("power_for      %lf的%d次方=%lf\n",i,q,power_for(i,q));
+	printf("power_while    %lf的%d次方=%lf\n",i,q,power_while(i,q));
+  printf("power_do_while %lf的%d次方=%lf\n",i,q,power_do_while(i,q));
+	printf("power_recursion%lf的%d次方=%lf\n",i,q,power_recursion(i,q));
+	system("pause");
+	return 0;
+}
