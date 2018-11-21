@@ -50,7 +50,7 @@ int main()
 	scanf("%lf %d",&i,&q);
 	printf("power_for      %lf的%d次方=%lf\n",i,q,power_for(i,q));
 	printf("power_while    %lf的%d次方=%lf\n",i,q,power_while(i,q));
-  printf("power_do_while %lf的%d次方=%lf\n",i,q,power_do_while(i,q));
+        printf("power_do_while %lf的%d次方=%lf\n",i,q,power_do_while(i,q));
 	printf("power_recursion%lf的%d次方=%lf\n",i,q,power_recursion(i,q));
 	system("pause");
 	return 0;
