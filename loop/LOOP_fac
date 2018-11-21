@@ -32,10 +32,8 @@ int fac_do_while(int x)
 ////////////////////////////////
 int fac_recursion(int x)
 {
-    if (x==1)
-      return 1;
-    else
-      return fac_recursion(x-1)*x;
+    if (x==1) return 1;
+    return fac_recursion(x-1)*x;
 }
 ///////////////////////////////////
 int main(void)
@@ -46,7 +44,7 @@ int main(void)
 	
 	printf("fac_for      的%d階層=%d\n",i,fac_for(i));
 	printf("fac_while    的%d階層=%d\n",i,fac_while(i));
-  printf("fac_do_while 的%d階層=%d\n",i,fac_do_while(i));
+        printf("fac_do_while 的%d階層=%d\n",i,fac_do_while(i));
 	printf("fac_recursion的%d階層=%d\n",i,fac_recursion(i));
 	system("pause");
 	return 0;
