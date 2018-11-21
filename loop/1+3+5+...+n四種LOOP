@@ -3,14 +3,10 @@
 
 int a(void)
 {
-
  int total=0;
-	 for (a=1;a<=101;a++)
+	 for (a=1;a<=101;a+=2)
 	   {
-	   	 if((a%2)==1)
-	   	  {
-	   	  	total+=a;
-		  }
+	   	total+=a 
 	   }
 	
  return total;
