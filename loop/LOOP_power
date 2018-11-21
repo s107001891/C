@@ -36,10 +36,8 @@ double power_do_while(double b,int a)
 ////////////////////////////////////
 double power_recursion(double b,int a)
 {
-    if (a==0)
-      return 1;
-    else
-       return power_recursion(b,a-1)*b;
+    if (a==0)return 1;
+    return power_recursion(b,a-1)*b;
 }
 ///////////////////////////////////
 int main()
