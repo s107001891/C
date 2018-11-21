@@ -44,8 +44,7 @@ int fib_do_while(int x)
 int fib_recursion(int x)
 {
     if (x==1||x==2) return 1;
-      else
-          return fib_recursion(x-1)+fib_recursion(x-2);
+    return fib_recursion(x-1)+fib_recursion(x-2);
 }
 ///////////////////////////////////
 int main()
