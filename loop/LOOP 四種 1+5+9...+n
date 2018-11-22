@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int for1(int x)
+{
+ int total;
+	 for(int a=1;a<=x;a+=4)
+	    total+=a;	
+ return total;
+}
+/////////////////////////////////////
+int while1(int x)
+{
+ int a=1,total=0;
+	  while(a<=x)
+	    {
+		  total+=a;
+		  a+=4; 
+		}	
+ return total;
+}
+////////////////////////////////
+int do_while1(int x)
+{
+  int a=1,total=0;
+    do{
+    	total+=a;
+    	a+=4;
+      }while(a<=x);
+ return total; 	
+}
+
+////////////////////////////////
+int recursion(int x)
+{
+   if(x%4==2) x-=1;
+   if(x%4==3) x-=2;
+   if(x%4==0) x-=3;
+   if(x<5)return 1;
+   return x+recursion(x-4);                     
+}
+///////////////////////////////////
+
+int main()
+{
+    int n;
+    printf("請輸入要加到多少:");
+    scanf("%d",&n);
+    
+    printf("for      的1+5+9...+%d=%d\n",n,for1(n));
+    printf("while    的1+5+9...+%d=%d\n",n,while1(n));
+    printf("dowhile  的1+5+9...+%d=%d\n",n,do_while1(n));
+    printf("recursion的1+5+9...+%d=%d\n",n,recursion(n));
+    system("pause");
+    return 0;	
+}
