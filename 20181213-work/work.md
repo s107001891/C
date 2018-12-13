@@ -1,3 +1,7 @@
+# 20181213:超難的指標一定要會
+
+### ex-1:
+```
 /* prog10_2, 指標變數的宣告 */
 #include <stdio.h> 
 #include <stdlib.h>
@@ -13,10 +17,79 @@ int main(void)
    system("pause");
    return 0;
 }
+```
+```
 假如 c存放的位址是000000000062FE3C
 請問你 
 [1]d的位址為何?Ans:000000000062FE44
-
 [2]num的位址為何?Ans:000000000062FE40
-
 [3]ptr的位址為何?Ans:000000000062FE48
+```
+### ex-2:
+```
+#include <stdio.h> 
+#include <stdlib.h>
+int main(void)
+{
+   int *ptr,d=103,num=210,c=333;	
+
+   ptr=&num;			
+   printf("num=%d, num的位址=&num=%p\n",num,&num); 
+   printf("*ptr=%d, ptr=%p, &ptr=%p\n",*ptr,ptr,&ptr); 
+   ptr=&c;
+   printf("c=%d, c的位址=&c=%p\n",c,&c); 
+   printf("*ptr=%d, ptr=%p, &ptr=%p\n",*ptr,ptr,&ptr); 
+   ptr=&d;
+   printf("d=%d, d的位址=&d=%p\n",d,&d); 
+   printf("*ptr=%d, ptr=%p, &ptr=%p\n",*ptr,ptr,&ptr);  
+   system("pause");
+   return 0;
+}
+
+```
+```
+假如 c存放的位址是000000000062FE3C
+請問你 
+[1]
+   ptr=&num;			
+   printf("num=%d, num的位址=&num=%p\n",num,&num); --->印出的內容為何??
+   printf("*ptr=%d, ptr=%p, &ptr=%p\n",*ptr,ptr,&ptr); --->印出的內容為何??
+[2]
+   ptr=&c;
+   printf("c=%d, c的位址=&c=%p\n",c,&c); --->印出的內容為何??
+   printf("*ptr=%d, ptr=%p, &ptr=%p\n",*ptr,ptr,&ptr); --->印出的內容為何??
+[3]
+   ptr=&d;
+   printf("d=%d, d的位址=&d=%p\n",d,&d); --->印出的內容為何??
+   printf("*ptr=%d, ptr=%p, &ptr=%p\n",*ptr,ptr,&ptr);  --->印出的內容為何??
+
+```
+
+### 練習1:完成底下的填空題
+
+```
+#include <stdio.h> 
+#include <stdlib.h>
+int main(void)
+{
+
+/*1:宣告一個整數變數,名稱叫myint出值設定為30 */
+
+   int ________=________;
+   
+/*2:宣告一個指向整數的指標變數,名稱叫myptr */
+   int _________;	
+
+/* 3:將myint的位址存在myptr指標變數 */
+   _______=_____;		
+   
+/* 4.印出myint的位址與所儲存的值 */
+   printf("myint整數變數值=________, "myint的位址=&myint=_______\n",_______,______);
+
+/* 5.印出myptr的位址與所儲存的值及*ptr的值 */
+   printf("*myptr=______, myptr=________, &myptr=_________\n",________,_________,__________); 
+   system("pause");
+   return 0;
+}
+
+```
