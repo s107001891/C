@@ -1,0 +1,22 @@
+/* prog10_2, 指標變數的宣告 */
+#include <stdio.h> 
+#include <stdlib.h>
+int main(void)
+{
+   int *ptr,d=100,num=20,c=33;	/* 宣告變數num與指標變數ptr */
+
+   ptr=&num;			/* 將num的位址設給指標ptr存放 */
+   printf("num=%d, &num=%p\n",num,&num); 
+   printf("*ptr=%d, ptr=%p, &ptr=%p\n",*ptr,ptr,&ptr); 
+   printf("c=%d, c的位址=%p\n",c,&c); 
+   printf("d=%d, d的位址=%p\n",d,&d); 
+   system("pause");
+   return 0;
+}
+假如 c存放的位址是000000000062FE3C
+請問你 
+[1]d的位址為何?Ans:000000000062FE44
+
+[2]num的位址為何?Ans:000000000062FE40
+
+[3]ptr的位址為何?Ans:000000000062FE48
